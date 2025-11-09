@@ -14,7 +14,7 @@ echo "-------------------------------------------------------------------------"
 echo ""
 echo "Tudo certo!! Agora digite os seguintes comandos no terminal: "
 echo ""
-echo '1.  export LD_LIBRARY_PATH=\"`pwd`/bibliotecas/raylib-5.5_linux_amd64/lib/"'
+echo '1.  export LD_LIBRARY_PATH="`pwd`/bibliotecas/raylib-5.5_linux_amd64/lib/"'
 echo "2.  make"
 echo ""
 echo "-------------------------------------------------------------------------"
