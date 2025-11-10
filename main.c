@@ -17,7 +17,12 @@ int main(void)
     Image placeholder = LoadImage("./imagens/placeholder_bg.png");
     Texture2D placeholder_texture = LoadTextureFromImage(placeholder);
     UnloadImage(placeholder);
-    
+
+    // carrega imagem de titulo
+    Image titulo = LoadImage("./imagens/titulo.png");
+    Texture2D titulo_texture = LoadTextureFromImage(titulo);
+    UnloadImage(titulo);
+
     // define structs com dimensoes e posicao dos botoes
     int w = 256, h = 64;
     Rectangle botaoJogar = {
@@ -33,6 +38,7 @@ int main(void)
         .width = w,
         .height = h
     };
+
     Rectangle botaoSair = {
         .x = (LARGURA / 2) - w / 2,
         .y = ((ALTURA / 2) - h / 2) + 2 * h + 16,
@@ -47,8 +53,9 @@ int main(void)
             // limpa plano de fundo da janela       
             ClearBackground(GetColor(GuiGetStyle(DEFAULT, BACKGROUND_COLOR)));
 
-            // desenha imagem do placeholder
+            // desenha imagem do placeholder e titulo
             DrawTexture(placeholder_texture, 0, 0, WHITE);
+            DrawTexture(titulo_texture, (LARGURA / 2) - 180, ALTURA / 28, WHITE);
             
             // define tamanho da fonte
             GuiSetStyle(DEFAULT, TEXT_SIZE, 20);
